@@ -1,0 +1,28 @@
+Algoritma Regula_Falsi(f, a, b, tol, max_iter)
+
+    // Memastikan tebakan awal mengurung akar (berbeda tanda)
+    Jika f(a) * f(b) >= 0 maka
+        Cetak "Tebakan awal tidak mengurung akar."
+        Kembalikan None
+    Akhir Jika
+
+    c <- a
+
+    // Perulangan dilakukan maksimal sebanyak max_iter
+    Untuk i dari 1 sampai max_iter lakukan
+
+        // Mencari titik potong garis lurus antara (a, f(a)) dan (b, f(b))
+        c <- (a * f(b) - b * f(a)) / (f(b) - f(a))
+
+        Jika |f(c)| < tol maka
+            Keluar dari perulangan  // Nilai fungsi sudah mendekati nol
+        Sebab Jika f(a) * f(c) < 0 maka
+            b <- c  // Akar berada di sub-interval bagian kiri
+        Else
+            a <- c  // Akar berada di sub-interval bagian kanan
+        Akhir Jika
+
+    Akhir Untuk
+
+    Kembalikan c
+Akhir Algoritma

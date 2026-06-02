@@ -1,0 +1,27 @@
+Algoritma Bisection(f, a, b, tol)
+    
+    // Memastikan tebakan awal mengurung akar (berbeda tanda)
+    Jika f(a) * f(b) >= 0 maka
+        Cetak "Tebakan awal tidak mengurung akar."
+        Kembalikan None
+    Akhir Jika
+    
+    c ← a
+    
+    // Perulangan dilakukan selama lebar interval dibagi dua lebih besar dari tol
+    Sementara (b - a) / 2.0 > tol lakukan
+        
+        c ← (a + b) / 2.0  // Mencari titik tengah interval
+        
+        Jika f(c) == 0 maka
+            Keluar dari perulangan  // Akar eksak ditemukan
+        Sebab Jika f(a) * f(c) < 0 maka
+            b ← c  // Akar berada di sub-interval bagian kiri
+        Else
+            a ← c  // Akar berada di sub-interval bagian kanan
+        Akhir Jika
+        
+    Akhir Sementara
+    
+    Kembalikan c
+Akhir Algoritma
