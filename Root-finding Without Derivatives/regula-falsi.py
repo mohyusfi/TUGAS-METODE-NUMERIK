@@ -29,3 +29,17 @@ def regula_falsi(f, a, b, tol=1e-5, max_iter=100):
 # Menjalankan Regula Falsi pada interval [-1, 1]
 akar_regula_falsi = regula_falsi(f, -1, 1)
 print(f"Akar (Regula Falsi): {akar_regula_falsi}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+

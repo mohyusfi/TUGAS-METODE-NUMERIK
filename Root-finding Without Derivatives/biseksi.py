@@ -26,3 +26,19 @@ def bisection(f, a, b, tol=1e-5):
 # Menjalankan Bisection pada interval [-1, 1]
 akar_bisection = bisection(f, -1, 1)
 print(f"Akar (Bisection): {akar_bisection}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
